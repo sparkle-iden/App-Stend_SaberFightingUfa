@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Page.Zoo_Info"
+             Title="Zoo_Info"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0" Orientation="Horizontal" MaximumHeightRequest="350">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image x:Name="Zoo_Image" Grid.Row="0" HeightRequest="350" ></Image>
+                <Image x:Name="Zoo_Image_2" Grid.Row="0" HeightRequest="350" ></Image>
+
+            </StackLayout>
+        </ScrollView>
+
+        <ScrollView Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label x:Name="Zoo_information" TextColor="#d6d5c0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="25"></Label>
+          
+        </ScrollView>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2"  VerticalOptions="Center" Spacing="-15">
+
+            <!-- Левая стрелка -->
+            <Button Text="&#x276E;" 
+             HorizontalOptions="Start" 
+             VerticalOptions="Center"
+             BackgroundColor="Transparent" 
+             TextColor="Beige" 
+             Clicked="Nazad"/>
+
+            <Button Text="НАЗАД" BackgroundColor="Transparent" TextColor="#d6d5c0"  Clicked="Nazad" VerticalOptions="Center"></Button>
+
+            <!-- Правая стрелка -->
+            <Button Text="&#x276F;"
+             BackgroundColor="Transparent"
+             HorizontalOptions="End" 
+             VerticalOptions="Center"
+             TextColor="Beige" 
+             Clicked="Nazad"/>
+
+        </StackLayout>
+
+    </Grid>
+    
+</ContentPage>

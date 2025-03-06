@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiApp3.Page.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp3"
+             NavigationPage.HasNavigationBar="False"
+             
+             >
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+            
+                <Image Grid.Row="0"
+                    Source="icon_avanpost.png" Style="{StaticResource DynamicHightImageLogo}" 
+                />
+      
+            <Label Grid.Row="1" 
+               Text="ДОБРО ПОЖАЛОВАТЬ НА ПЛАНЕТУ БАТУУ, В АВАНПОСТ КОНТРАБАНДИСТОВ. ЗДЕСЬ ВЫ МОЖЕТЕ ПОУЧАСТВОВАТЬ В РАЗЛИЧНЫХ КВЕСТАХ, СФОТОГРАФИРОВАТЬСЯ В НАШЕЙ ФОТОЗОНЕ, ПОИГРАТЬ В КАРТОЧНЫЕ ИГРЫ ИЗ ДАЛЕКОЙ ДАЛЕКОЙ ГАЛАКТИКИ, А ТАКЖЕ ПОПРОБОВАТЬ СЕБЯ В РОЛИ ДЖЕДАЯ И НАУЧИТЬСЯ ОБРАЩЕНИЮ СО СВЕТОВЫМ МЕЧОМ."
+               HorizontalTextAlignment="Center" 
+               HorizontalOptions="Center"   
+               Padding="10,0,10,0"
+               Style="{StaticResource DynamicLabelStyle}">
+            <Label.Shadow>
+                <Shadow Brush="Black"
+                Offset="2,2"
+                Radius="5"
+                Opacity="3" />
+            </Label.Shadow>
+            </Label>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2"  VerticalOptions="Center"   >
+
+            <!-- Левая стрелка -->
+            <Button Text="&#x276E;" 
+             HorizontalOptions="Start" 
+             VerticalOptions="Center"
+             BackgroundColor="Transparent" 
+             TextColor="Beige" 
+             Clicked="OnCounterClicked"
+             Style="{StaticResource DynamicButtonStyle}"/>
+
+            <Button Text="Далее"  BackgroundColor="Transparent" TextColor="#d6d5c0"  Clicked="OnCounterClicked" Style="{StaticResource DynamicButtonStyle}"></Button>
+
+            <!-- Правая стрелка -->
+            <Button Text="&#x276F;" 
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="End" 
+                    VerticalOptions="Center"
+                    TextColor="Beige" 
+                    Clicked="OnCounterClicked"
+                    Style="{StaticResource DynamicButtonStyle}"/>
+        </StackLayout>
+        
+     </Grid>
+
+</ContentPage>

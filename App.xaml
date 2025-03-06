@@ -1,0 +1,27 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp3"
+             x:Class="MauiApp3.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="DynamicLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{DynamicResource GlobalFontSize}"/>
+            </Style>
+            <Style x:Key="DynamicButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="{DynamicResource GlobalFontSizeButton}"/>
+            </Style>
+            <Style x:Key="DynamicHightImageLogo" TargetType="Image">
+                <Setter Property="HeightRequest" Value="{DynamicResource GlobalHightImageLogo}"/>
+            </Style>
+            <Style x:Key="DynamicImageButtonQuest" TargetType="ImageButton">
+                <Setter Property="HeightRequest" Value="{DynamicResource GlobalHightImageButtonQuest}"/>
+                <Setter Property="WidthRequest" Value="{DynamicResource GlobalWidhtImageButtonQuest}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

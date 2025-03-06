@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="MauiApp3.Page.Scan"
+             Title="Scan"
+             >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <zxing:CameraBarcodeReaderView  Grid.Row="0"
+            x:Name="cameraBarcodeReaderView"
+            BarcodesDetected="BarcodesDetected" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="1"  VerticalOptions="Center" Spacing="-15"> 
+
+            <!-- Левая стрелка -->
+            <Button Text="&#x276E;" 
+                      HorizontalOptions="Start" 
+                      VerticalOptions="Center"
+                      BackgroundColor="Transparent" 
+                      TextColor="#d6d5c0"
+                      Clicked="Nazad"/>
+
+            <Button Text="НАЗАД" BackgroundColor="Transparent" TextColor="#d6d5c0"   Clicked="Nazad"></Button>
+
+            <!-- Правая стрелка -->
+            <Button Text="&#x276F;" WidthRequest="50" HeightRequest="80"
+                      BackgroundColor="Transparent"
+                      HorizontalOptions="End" 
+                      VerticalOptions="Center"
+                      TextColor="#d6d5c0" 
+                      Clicked="Nazad"/>
+
+        </StackLayout>
+    </Grid>
+   
+</ContentPage>
